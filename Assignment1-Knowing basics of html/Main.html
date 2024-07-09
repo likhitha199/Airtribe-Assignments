@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Vault</title>
+    <meta name="description" content="Create stunningly perfect portfolios with our easy-to-use design tools.">
+    <meta name="keywords" content="portfolio, visual-vault, website">
+    <link rel="stylesheet" href="#">
+    <style>
+        * {
+            margin: 5;
+            padding: 5;
+        }
+
+        .grid-container {
+            display: grid;
+            place-items: center;
+            height: 25px;
+        }
+
+        .grid-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="grid-container" style="display: inline-block; padding-left: 40%;">
+
+            <span style="float: left;"> <img src="Resources/portfolio.png" alt="Visual Vault" width="100"> </span>
+            <h1>Visual Vault</h1>
+            <marquee behavior="scroll" direction="middle" scrollamount="20" width="100%" height="20px"
+                style="text-align: center;">
+                Create stunningly perfect portfolios with our easy-to-use design tools.
+            </marquee>
+        </div>
+    </header>
+    <main>
+        <section>
+            <iframe width="10%" height="640" title="Landing Page" src="./Redirect.html"></iframe>
+            <iframe width="89%" height="640" title="My Resume" name="rightpanel" src="./Portfolio.html"></iframe>
+        </section>
+    </main>
+    <footer>
+        <address> 
+            Contact us: <a href="mailto:support@visualvault.com">support@visualvault.com</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Mobile no.: <a href="tel:+918448xxxx18">8448xxxx18</a>
+        </address>
+    </footer>
+</body>
+
+</html>

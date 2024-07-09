@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details-Form</title>
+    <meta name="description" content="Fill in personal details for queries or contact">
+    <meta name="keywords" content="personal-details, visual-vault, queries, contact">
+    <link rel="stylesheet" href="#">
+</head>
+
+<body>
+    <main>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <form>
+                <label for="name">Firstname</label>
+                <input type="text" id="firstName" name="FirstName"></input>
+                </br>
+                </br>
+                <label for="name">Middlename:</label>
+                <input type="text" id="middleName" name="MiddleName"></input>
+                </br>
+                </br>
+                <label for="name">Lastname:</label>
+                <input type="text" id="lastName" name="lastName"></input>
+                </br>
+                </br>
+                <label for="gender">Gender :</label>
+                <select id="gender" name="gender">
+                    <option value="male">--Select--</option>
+                    <option value="male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                </br>
+                </br>
+                <label for="gossip">Subscription to Weekly Gossip</label>
+                </br>
+                <input type="radio" name="yes" id="yes" value="yes">
+                <label for="yes">Yes</label>
+                </br>
+                <input type="radio" name="no" id="no" value="no">
+                <label for="no">No</label>
+                </br>
+                </br>
+                <label for="dob">DOB </label>
+                <input type="datetime-local" name="dob" id="dob">
+                </br>
+                <label for="phone1">Phone :</label>
+                <input type="text" name="phone1" value="+91" id="phone1" disabled size="2">
+                <input type="text" name="phone2" id="phone2" size="10">
+                </br>
+                </br>
+                <label for="address">Address </label>
+                </br>
+                <textarea name="address" id="address" cols="80" rows="5"></textarea>
+                </br>
+                </br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                </br>
+                </br>
+                </br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                </br>
+                </br>
+                </br>
+                <label for="retypepassword">Re-type password:</label>
+                <input type="password" name="retypepassword" id="retypepassword">
+                </br>
+                </br>
+                <input type="checkbox" id="agreement" required name="T-C" value="applied">
+                <label for="agreement"><a href="#">Agree to Terms to process personal info</a>
+                </label>
+                </br>
+                </br>
+                <label for="color">Choose Favourite Color
+                </label>
+                <input type="color" name="color" id="color">
+                </br>
+                </br>
+
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+    </main>
+
+</body>
+
+</html>
