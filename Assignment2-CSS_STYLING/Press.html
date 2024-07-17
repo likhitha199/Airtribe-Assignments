@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws and Claws - Portfolio</title>
+    <meta name="description" content="Paws and Claws Portfolio">
+    <meta name="keywords" content="portfolio, pets, paws and claws">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Move general styles to styles.css for better organization */
+        
+        .team-title ,.founders-header {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FF00FF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Roboto', sans-serif;
+}
+.mainContent {
+            position: relative;
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            margin: 0 auto; /* Centering the slider container */
+        }
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #8B4513;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #FF1493;
+}
+.founder-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .founders {
+        width: 75%; /* Match the image width */
+        padding-top: 20px; /* Add some space between image and text */
+    }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div class="flex-grow container mx-auto full-width">
+        <main id="mainContent" class="bg-gray-100">
+            <img src="Resources/PressImage.jpg" alt="PressImage" class="h-[650px] w-full mx-auto rounded-lg mb-4">
+        </main>
+        <section class="bg-white py-12 px-10 rounded-lg shadow-md mb-6">
+            <h1 class="team-title">PRESS 🐾</h1>
+            <h2 class="subtitle">Pawsome Stories About Petzbe</h2>
+            <p class="description">
+                "As she greeted guests, the company\’s chief executive officer, an eerily self-possessed Brussels Griffon named Angus, 
+                sat on her lap looking imperious." - Read about our CEO <span class="highlight"><a href="https://www.wsj.com/articles/warning-no-humans-allowed-in-this-virtual-community-1527602401"> The Wall Street Journal </a> </span>
+                @snugglingnugget
+            </p>
+            <table rows="3" class="flex-col justify-start items-center">
+                <tr class="flex justify-start items-center space-x-8 text-sm uppercase">
+                    <th><img src="Resources/WallStreetJournal.png" alt="Wall Street Journal"/> </th>
+                    <th><img src="Resources/Wired.jpeg" alt="Wired"/></th>
+                    <th><img src="Resources/People.png" alt="People"/></th>
+                    <th><img src="Resources/GoodMorningAmerica.jpeg" alt="Wall Street Journal"/> </th>
+                </tr>
+                <tr class="flex justify-start items-center space-x-8 text-sm uppercase">
+                    <th><img src="Resources/HindustanTimes.png" alt="Wall Street Journal"/> </th>
+                    <th><img src="Resources/WiredJapan.jpeg" alt="Wired"/></th>
+                    <th><img src="Resources/SilverTelegram.png" alt="People"/></th>
+                    <th><img src="Resources/doglife.jpeg" alt="People"/></th>
+                </tr>
+            </table>
+            
+            
+        </section>
+    </div>
+
+
+    <footer class="bg-[#7FFFD4] w-100 text-center">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-8">  petzbe blog</h2>
+            <div class="flex justify-center space-x-4">
+                <img src="https://images.squarespace-cdn.com/content/590b1e0b414fb5faa94a330b/1542571860670-2RLJPTCZRECKTN01UWO8/appStore.png?content-type=image%2Fpng" alt="Download on the App Store" class="h-12">
+                <img src="https://images.squarespace-cdn.com/content/590b1e0b414fb5faa94a330b/1542571543033-N0VP47HS2XA83NHS4BBO/google-play-badge.png?content-type=image%2Fpng" alt="Get it on Google Play" class="h-12">
+            </div>
+            Contact us: <a href="mailto:support@pawsandclaws.com" class="text-blue-600 hover:text-blue-800">support@pawsandclaws.com</a>
+        </div>
+        <div class="text-sm">
+            © 2023 Petzbe | <a href="#" class="underline">Terms Of Use</a> | <a href="#" class="underline">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>

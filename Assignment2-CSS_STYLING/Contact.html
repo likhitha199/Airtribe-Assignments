@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details-Form</title>
+    <meta name="description" content="Fill in personal details for queries or contact">
+    <meta name="keywords" content="personal-details, visual-vault, queries, contact">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <main class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg mx-auto">
+        <fieldset class="justify-center">
+            <legend class="text-2xl font-bold mb-4 text-gray-700 text-center">Personal Details</legend>
+            <form class="space-y-6">
+                <div>
+                    <label for="firstName" class="block text-gray-600 text-center">Firstname</label>
+                    <input type="text" id="firstName" name="FirstName" class="mt-1 p-2 w-full border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="middleName" class="block text-gray-600 text-center">Middlename</label>
+                    <input type="text" id="middleName" name="MiddleName" class="mt-1 p-2 w-full border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="lastName" class="block text-gray-600 text-center">Lastname</label>
+                    <input type="text" id="lastName" name="lastName" class="mt-1 p-2 w-full border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="gender" class="block text-gray-600 text-center">Gender</label>
+                    <select id="gender" name="gender" class="mt-1 p-2 w-full border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                        <option value="male">--Select--</option>
+                        <option value="male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span class="block text-gray-600 text-center">Do you want to Subscribe to Weekly Newsletter?</span>
+                    <div class="mt-1 flex justify-center space-x-4">
+                        <input type="radio" id="yes" name="newsletter" value="yes" class="form-radio text-indigo-600">
+                        <label for="yes" class="text-gray-600">Yes</label>
+
+                        <input type="radio" id="no" name="newsletter" value="no" class="form-radio text-indigo-600">
+                        <label for="no" class="text-gray-600">No</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="dob" class="block text-gray-600 text-center">DOB</label>
+                    <input type="datetime-local" name="dob" id="dob" class="mt-1 p-2 w-full border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="phone1" class="block text-gray-600 text-center">Phone</label>
+                    <div class="flex justify-center space-x-2">
+                        <input type="text" name="phone1" value="+91" id="phone1" disabled size="2" class="mt-1 p-2 w-16 border rounded-md border-gray-300 bg-gray-100">
+                        <input type="text" name="phone2" id="phone2" size="10" class="mt-1 p-2 flex-grow border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-600 text-center">Email</label>
+                    <input type="email" name="email" id="email" class="mt-1 p-2 w-full border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div>
+                    <label for="color" class="block text-gray-600 text-center">Choose Favourite Color</label>
+                    <div class="flex justify-center">
+                        <input type="color" name="color" id="color" class="mt-1 p-2 border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <input type="checkbox" id="agreement" required name="T-C" value="applied" class="form-checkbox text-indigo-600">
+                    <label for="agreement" class="text-gray-600 ml-2"><a href="#" class="text-indigo-600 hover:underline">Agree to Terms to process personal info</a></label>
+                </div>
+
+                <div class="flex justify-center space-x-4">
+                    <input type="reset" value="Reset" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md cursor-pointer hover:bg-gray-400">
+                    <input type="submit" value="Submit" class="bg-indigo-600 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-indigo-700">
+                </div>
+            </form>
+        </fieldset>
+    </main>
+
+</body>
+
+</html>

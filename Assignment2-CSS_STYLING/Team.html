@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws and Claws - Portfolio</title>
+    <meta name="description" content="Paws and Claws Portfolio">
+    <meta name="keywords" content="portfolio, pets, paws and claws">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Move general styles to styles.css for better organization */
+        
+        .team-title ,.founders-header {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FF00FF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #8B4513;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #FF1493;
+}
+.founder-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .founders {
+        width: 75%; /* Match the image width */
+        padding-top: 20px; /* Add some space between image and text */
+    }
+    .clip-container {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+    .clip-container img {
+            width: 100%;
+            height: auto;
+            clip-path: inset(10% 20% 10% 20%); /* Custom cropping using clip-path */
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div class="flex-grow container mx-auto full-width">
+        <div id="crop-container" class="bg-gray-100">
+            <img src="Resources/founders.jpg" alt="Founders" class="h-[700px] w-full mx-auto rounded-lg mb-4">
+        </div>
+        <section class="bg-white py-12 px-10 rounded-lg shadow-md mb-6">
+            <h1 class="team-title">TEAM 🐾</h1>
+            <h2 class="subtitle">Our Fearless Leader Is A Brussels Griffon</h2>
+            <p class="description">
+                <strong>Angus, Co-CEO,</strong> never fails to forget just how incredibly handsome & iconic he is. He is a "lover of the finer things in life." 
+                Peculiar in looks and personality. Extremely loving but with a healthy understanding of his human's shortcomings. Our 
+                fearless leader Angus has been deemed the "Tiniest CEO in the WORLD" by many <span class="highlight">notable sources!</span> 'Sniff' him on Petzbe 
+                @snugglingnugget
+            </p>
+            <img src="Resources/pomelodog.jpg" alt="Pomelodog" class="w-3/4 h-50 mx-auto rounded-lg mb-4">
+            <h1 class="founders-header flex justify-center">Meet the Founders of Petzbe</h1>
+            
+                <div class="founder-section">
+                    <img src="Resources/founders.jpg" alt="Founders" class="w-3/4 h-50 mx-auto rounded-lg mb-4">
+                    <div class="founders mx-auto mt-4 px-4">
+                        <h2 class="subtitle">Andrea Nerep, Founder & CEO</h2>
+                <p class="description">
+                    <strong>Andrea</strong> (to the right) has over 10 years of experience in marketing, branding and product development — with a proven track record in building and scaling ventures.
+                    As the founder of Petzbe, she conceptualized and steered the development of an app, crafted the brand and marketing strategy, and built a pet parent community with hundreds of thousands of users.
+                    Prior to Petzbe, she worked in various start-ups from their inception, developing communication and marketing strategies. She has a MSc in Public Relations and Corporate Communication from New York University,
+                    and a BSc in Marketing and Communication Design from Webster University. She's from Stockholm, Sweden, but has lived in NYC for the past 10 years. It was her Brussels Griffon Angus, Co-CEO of Petzbe, that got her into the pet industry. 
+                    Andrea is on a mission to make Petzbe the largest pet-eco system & household name for the hundreds of millions of pet parents worldwide, where they can explore everything pet-related, tail to nose! 🐾✨
+                </p>
+                    </div>
+                </div>
+          
+
+            <div class="video-container flex justify-center py-10">
+                <iframe width="75%" height="500" src="https://www.youtube.com/embed/XBqh7OAcveM" title="Paws and Claws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="bg-[#7FFFD4] w-100 text-center">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-8">  petzbe blog</h2>
+            <div class="flex justify-center space-x-4">
+                <img src="https://images.squarespace-cdn.com/content/590b1e0b414fb5faa94a330b/1542571860670-2RLJPTCZRECKTN01UWO8/appStore.png?content-type=image%2Fpng" alt="Download on the App Store" class="h-12">
+                <img src="https://images.squarespace-cdn.com/content/590b1e0b414fb5faa94a330b/1542571543033-N0VP47HS2XA83NHS4BBO/google-play-badge.png?content-type=image%2Fpng" alt="Get it on Google Play" class="h-12">
+            </div>
+            Contact us: <a href="mailto:support@pawsandclaws.com" class="text-blue-600 hover:text-blue-800">support@pawsandclaws.com</a>
+        </div>
+        <div class="text-sm">
+            © 2023 Petzbe | <a href="#" class="underline">Terms Of Use</a> | <a href="#" class="underline">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+</html>

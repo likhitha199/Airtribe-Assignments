@@ -1,0 +1,94 @@
+/* Importing Math Bold or equivalent font */
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');/* Replace with your Math Bold font */
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #FF1493;
+    justify-self: center; 
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center align the content */
+    align-items: center; /* Center align vertically */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fce7f3;
+    width: 100%; /* Ensure the navbar-brand takes full width */
+}
+
+.navbar-brand img {
+    width: 100%; /* Make the image width 100% of its container */
+    max-width: 200px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-title {
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 0px;
+}
+
+/* Navigation link styles */
+.nav-link {
+    text-decoration: none;
+    color: #fbcfe8;
+    font-size: 18px;
+    font-family: 'Literata', serif; /* Apply the Math Bold font */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #ff0059;
+}
+
+/* Sidebar styles */
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar {
+    background-color: #f8f9fa;
+    border-right: 1px solid #eaeaea;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Content styles */
+.content {
+    padding: 20px;
+}

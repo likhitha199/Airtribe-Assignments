@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws and Claws - Portfolio</title>
+    <meta name="description" content="Paws and Claws Portfolio">
+    <meta name="keywords" content="portfolio, pets, paws and claws">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Move general styles to styles.css for better organization */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+            margin: 0 auto; /* Centering the slider container */
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+            width: 100%;
+        }
+        .slide {
+            min-width: 100%;
+            overflow: hidden; /* Ensuring content fits within slide */
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer; /* Ensure cursor changes on hover */
+        }
+        .active {
+            background-color: #717171;
+        }
+        .team-title ,.founders-header {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FF00FF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #8B4513;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #FF1493;
+}
+.founder-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .founders {
+        width: 75%; /* Match the image width */
+        padding-top: 20px; /* Add some space between image and text */
+    }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div class="flex-grow container mx-auto full-width">
+        <main id="mainContent" class="bg-gray-100">
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slide"><img src="Resources/pexels-chevanon.jpg" alt="Cute Dog 1"></div>
+                    <div class="slide"><img src="Resources/dog2.jpg" alt="Cute Dog 2"></div>
+                    <div class="slide"><img src="Resources/cat1.jpg" alt="Cute Cat"></div>
+                </div>
+                <div class="dots" id="dots">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </main>
+        <section class="bg-white py-12 px-10 rounded-lg shadow-md mb-6">
+            <h1 class="team-title flex justify-center">Social media for pets 🐾</h1>
+            <h2 class="subtitle flex justify-center">The Cutest Community On The Planet 🌎🐾</h2>
+            <p class="description ml-36 mr-36">
+                What would your pet say if they could speak? Petzbe is a social media app & community where we share our pets' lives from the perspective of our pets. 
+                As it turns out, people become very friendly, funny, and cute when they speak as their pets –
+                our community is living proof of that! While we're a pet community at the core, we’re expanding to become a trusted hub
+                for all sorts of pet-related information, a platform for pet companies to engage with pet parents, and ultimately the go-to platform worldwide for all things pet-related. 
+            </p>
+            <div class="video-container flex justify-center py-24">
+                <iframe width="75%" height="500" src="https://www.youtube.com/embed/XBqh7OAcveM" title="Paws and Claws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <hr>
+            <h1 class="team-title flex justify-center py-12">
+                Our Users About Petzbe🐾</h1>
+            <h2 class="subtitle flex justify-center">Pawsitively Pawsome Reviews🌟</h2>
+            <div class="reviews-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 justify-center items-center">
+                <figure class="block-animation-none ml-36 mr-36">
+                    <blockquote data-animation-role="quote">
+                      <span>&#147;</span>
+                      “So, I have had this app for roughly a month now, 
+                      and I love it so much! I run an account for my hedgehog Kevin,
+                      and I love the pawsitivity from everyone on there.”<span>&#148;</span>
+                    </blockquote>
+                    <figcaption class="source">&mdash; Petzbe User1</figcaption>
+                  </figure>
+                  <figure class="block-animation-none ">
+                    <blockquote data-animation-role="quote">
+                      <span>&#147;</span>
+                      “I normally NEVER write reviews but this app is 
+                      just making my day and all the days to come! 
+                      It’s all animals, and everyone I’ve met so far
+                      is extremely friendly and kind.”<span>&#148;</span>
+                    </blockquote>
+                    <figcaption class="source">&mdash; Petzbe User2</figcaption>
+                  </figure>
+                  <figure class="block-animation-none ml-36 mr-36">
+                    <blockquote data-animation-role="quote">
+                      <span>&#147;</span>
+                      “So excited to finally have a platform for my doggos to express themselves. 
+                      It’s so easy to use and I love seeing all the pets and all the unique places they come from! 💕💕”<span>&#148;</span>
+                    </blockquote>
+                    <figcaption class="source">&mdash; Petzbe User2</figcaption>
+                  </figure>
+            </div>
+
+            
+        </section>
+    </div>
+
+
+    <footer class="bg-[#7FFFD4] w-100 text-center">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-8">  petzbe blog</h2>
+            <div class="flex justify-center space-x-4">
+                <img src="https://images.squarespace-cdn.com/content/590b1e0b414fb5faa94a330b/1542571860670-2RLJPTCZRECKTN01UWO8/appStore.png?content-type=image%2Fpng" alt="Download on the App Store" class="h-12">
+                <img src="https://images.squarespace-cdn.com/content/590b1e0b414fb5faa94a330b/1542571543033-N0VP47HS2XA83NHS4BBO/google-play-badge.png?content-type=image%2Fpng" alt="Get it on Google Play" class="h-12">
+            </div>
+            Contact us: <a href="mailto:support@pawsandclaws.com" class="text-blue-600 hover:text-blue-800">support@pawsandclaws.com</a>
+        </div>
+        <div class="text-sm">
+            © 2023 Petzbe | <a href="#" class="underline">Terms Of Use</a> | <a href="#" class="underline">Privacy Policy</a>
+        </div>
+    </footer>
+    <!-- JavaScript at the end of the body tag -->
+    <script>
+        let currentSlideIndex = 0;
+        let slides = document.querySelectorAll('.slide');
+        let dots = document.querySelectorAll('.dot');
+        console.log(slides.length);
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+            document.querySelector('.slider').style.transform = 'translateX(' + (-currentSlideIndex * 100) + '%)';
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlideIndex + 1);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        setInterval(nextSlide, 2000);
+
+        window.onload = function() {
+            showSlide(currentSlideIndex);
+        }
+    </script>
+
+</body>
+</html>
