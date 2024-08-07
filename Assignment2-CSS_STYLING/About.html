@@ -82,6 +82,14 @@
         width: 75%; /* Match the image width */
         padding-top: 20px; /* Add some space between image and text */
     }
+    .block-animation-none 
+    {
+        align-items: left;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 0px;
+        margin: 0px;
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
@@ -119,7 +127,7 @@
             <h2 class="subtitle flex justify-center">Pawsitively Pawsome Reviews🌟</h2>
             <div class="reviews-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 justify-center items-center">
                 <figure class="block-animation-none ml-36 mr-36">
-                    <blockquote data-animation-role="quote">
+                    <blockquote class="flex-wrap" data-animation-role="quote">
                       <span>&#147;</span>
                       “So, I have had this app for roughly a month now, 
                       and I love it so much! I run an account for my hedgehog Kevin,
@@ -128,7 +136,7 @@
                     <figcaption class="source">&mdash; Petzbe User1</figcaption>
                   </figure>
                   <figure class="block-animation-none ">
-                    <blockquote data-animation-role="quote">
+                    <blockquote class="flex-wrap" data-animation-role="quote">
                       <span>&#147;</span>
                       “I normally NEVER write reviews but this app is 
                       just making my day and all the days to come! 
@@ -138,7 +146,7 @@
                     <figcaption class="source">&mdash; Petzbe User2</figcaption>
                   </figure>
                   <figure class="block-animation-none ml-36 mr-36">
-                    <blockquote data-animation-role="quote">
+                    <blockquote class="flex-wrap" data-animation-role="quote">
                       <span>&#147;</span>
                       “So excited to finally have a platform for my doggos to express themselves. 
                       It’s so easy to use and I love seeing all the pets and all the unique places they come from! 💕💕”<span>&#148;</span>
