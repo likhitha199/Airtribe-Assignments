@@ -1,4 +1,3 @@
-// Sample questions. DONT touch this data
 const questions = [
     {
         text: "Which language is primarily used for web app development?",
@@ -52,21 +51,95 @@ const questions = [
     },
 ];
 
+let currQuestionInd = 0;
+let score = 0;
+let questionElement = document.getElementById("question");
+let answersElement = document.getElementById("answer-list");
+let submitButton = document.getElementById("submit");
+let nextButton = document.getElementById("next");
+let prevButton = document.getElementById("prev");
 
+let submittedQuestions = new Array(questions.length).fill(false);
 
 function loadQuestion() {
-    // Load the first question and load subsequent question from this function
+    const currQuestion = questions[currQuestionInd];
+    questionElement.textContent = currQuestion.text;
+    answersElement.innerHTML = "";
+    currQuestion.options.forEach((option, index) => {
+        const li = document.createElement("li");
+        const input = document.createElement("input");
+        input.type = 'radio';
+        input.name = 'option';
+        input.value = index;
+        li.appendChild(input);
+        li.appendChild(document.createTextNode(option));
+        answersElement.appendChild(li);
+    });
+
+    if (submittedQuestions[currQuestionInd]) {
+        submitButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+    } else {
+        submitButton.style.display = 'inline';
+        nextButton.style.display = 'none';
+    }
+
+    submitButton.disabled = false;
 }
 
 submitButton.addEventListener("click", () => {
-    // Implement the logic when the user clicks on submit button. The answer selected by the user should be validated here with the correct option
+    const selectedOption = document.querySelector('input[name="option"]:checked');
+    if (selectedOption) {
+        const selectedAnswer = parseInt(selectedOption.value);
+        const correctAnswer = questions[currQuestionInd].correct;
 
+        answersElement.children[correctAnswer].style.backgroundColor = 'lightgreen';
+
+        if (selectedAnswer === correctAnswer) {
+            score++;
+        } else {
+            answersElement.children[selectedAnswer].style.backgroundColor = '#FFCCCB';
+        }
+
+        // Disable all radio buttons after submission
+        document.querySelectorAll('input[name="option"]').forEach(input => {
+            input.disabled = true;
+        });
+
+        submittedQuestions[currQuestionInd] = true;
+        submitButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        prevButton.disabled = false;
+    } else {
+        alert('Please select an answer.');
+    }
 });
 
 nextButton.addEventListener("click", () => {
-    // Implement the logic for showing the next question in the questions array. Basic DOM manipulation methods are required here.
-    // Also check for quiz completion here as well
+    currQuestionInd++;
+    if (currQuestionInd < questions.length) {
+        loadQuestion();
+    } else {
+        questionElement.textContent = 'Quiz finished!';
+        answersElement.innerHTML = '';
+        submitButton.style.display = 'none';
+        nextButton.style.display = 'none';
+        prevButton.style.display = 'none';
+        alert(`Final score: ${score}`);
+    }
+});
+
+prevButton.addEventListener("click", () => {
+    currQuestionInd--;
+    if (currQuestionInd >= 0 && currQuestionInd < questions.length) {
+        loadQuestion();
+        prevButton.disabled = currQuestionInd === 0;
+    } else {
+        alert('You can\'t go back any further! Please click next to proceed to the quiz.');
+        currQuestionInd++;
+    }
 });
 
 // Load the first question on startup
 loadQuestion();
+prevButton.disabled = true;
