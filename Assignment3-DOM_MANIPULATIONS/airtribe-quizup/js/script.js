@@ -53,101 +53,20 @@ const questions = [
 ];
 
 
-let currQuestionInd=0;
-let score=0;
-let questionElement = document.getElementById("question");
-let answersElement = document.getElementById("answer-list");
-let submitButton = document.getElementById("submit");
-let nextButton= document.getElementById("next");
-let prevButton= document.getElementById("prev");
+
 function loadQuestion() {
-    const currQuestion=questions[currQuestionInd];
-    questionElement.textContent=questions[currQuestionInd].text;
-    answersElement.innerHTML="";
-    currQuestion.options.forEach((option,index)=>{
-        const li=document.createElement("li");
-        const input=document.createElement("input");
-        input.type='radio';
-        input.name='option';
-        input.value=index;
-        li.appendChild(input);
-        li.appendChild(document.createTextNode(option));
-        answersElement.appendChild(li);
-    })
+    // Load the first question and load subsequent question from this function
 }
 
 submitButton.addEventListener("click", () => {
-    const selectedOption = document.querySelector('input[name="option"]:checked');
-    if (selectedOption) {
-        const selectedAnswer = parseInt(selectedOption.value);
-        const correctAnswer = questions[currQuestionInd].correct;
-        
-        // Mark correct answer as green
-        answersElement.children[correctAnswer].style.backgroundColor = 'lightgreen';
-        
-        if (selectedAnswer === correctAnswer) {
-            score++;
-        } else {
-            // Mark selected wrong answer as red
-            answersElement.children[selectedAnswer].style.backgroundColor = '#FFCCCB';
-        }
-        
-        // Disable all radio buttons after submission
-        document.querySelectorAll('input[name="option"]').forEach(input => {
-            input.disabled = true;
-        });
-        
-        submitButton.disabled = true;
-        nextButton.disabled = false;
-        prevButton.disabled = false;
-    } else {
-        alert('Please select an answer.');
-    }
+    // Implement the logic when the user clicks on submit button. The answer selected by the user should be validated here with the correct option
+
 });
 
 nextButton.addEventListener("click", () => {
-    currQuestionInd++;
-    if (currQuestionInd < questions.length) {
-        loadQuestion();
-        submitButton.disabled = false;
-        nextButton.disabled = true;
-    } else {
-        questionElement.textContent = 'Quiz finished!';
-        answersElement.innerHTML = '';
-        submitButton.disabled = true;
-        nextButton.disabled = true;
-        prevButton.disabled=true;
-        alert(`Final score: ${score}`);
-    }
+    // Implement the logic for showing the next question in the questions array. Basic DOM manipulation methods are required here.
+    // Also check for quiz completion here as well
 });
 
-function loadPrevQuestion() {
-    const currQuestion=questions[currQuestionInd];
-    questionElement.textContent=questions[currQuestionInd].text;
-    answersElement.innerHTML="";
-    currQuestion.options.forEach((option,index)=>{
-        const li=document.createElement("li");
-        const input=document.createElement("input");
-        input.type='radio';
-        input.name='option';
-        input.value=index;
-        li.appendChild(input);
-        li.appendChild(document.createTextNode(option));
-        answersElement.appendChild(li);
-    })
-}
-prevButton.addEventListener("click", () => {
-    currQuestionInd--;
-    if (currQuestionInd >=0 && currQuestionInd < questions.length) {
-        loadPrevQuestion();
-        prevButton.disabled=false;
-        submitButton.disabled = true;
-        nextButton.disabled = false;
-    } else {
-        alert(`You can't go back any further!!! Please click next to proceed to the quiz`);
-        currQuestionInd++;
-    }
-});
 // Load the first question on startup
 loadQuestion();
-nextButton.disabled = true;
